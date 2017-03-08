@@ -1,7 +1,7 @@
 # ansible-ssh-banner
 This repo is to test different ways of handling servers which run a promt when you log in.
 
-There are two containers:
+There are two containers, the details are below but the general idea is do `docker-compose up -d sshd`, then `docker-compose run --rm ansible /bin/bash` to enter ansible, from there you can play around and test these things out.
 
 ## sshd
 This container runs an sshd server, set up with a `deployer` user.
