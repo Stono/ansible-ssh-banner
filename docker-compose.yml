@@ -1,0 +1,20 @@
+version: '2'
+
+networks:
+  secret:
+
+services:
+  sshd:
+    build: sshd
+    hostname: secret-server
+    restart: always
+    networks:
+      secret:
+        aliases:
+          - secret-server
+
+  ansible:
+    build: ansible
+    hostname: ansible
+    networks:
+      secret:

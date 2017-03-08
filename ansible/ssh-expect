@@ -1,0 +1,10 @@
+#!/usr/bin/expect
+set arguments [lrange $argv 0 end]
+
+spawn ssh -t -t {*}$arguments
+set prompt ":|#|\\\$"
+expect "password: "
+send -- "password\r"
+expect "Why are you logging on to this lovely server"
+send -- "because I am deploying ansible\r"
+expect "#"

@@ -1,0 +1,8 @@
+---
+- hosts: all
+
+  tasks:
+  - expect:
+      command: "echo hello" 
+      responses:
+        (?i)Why are you logging on to this lovely server: "Because I am deploying."

@@ -1,0 +1,2 @@
+[target]
+alias ansible_ssh_host=secret-server
